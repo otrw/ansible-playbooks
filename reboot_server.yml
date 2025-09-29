@@ -1,0 +1,9 @@
+---
+- name: Reboot the server
+  hosts: all
+  gather_facts: no
+  become: true
+  tasks:
+    - name: Reboot the remote server
+      reboot:
+

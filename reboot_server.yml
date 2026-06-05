@@ -1,9 +1,9 @@
 ---
 - name: Reboot the server
   hosts: all
-  gather_facts: no
+  gather_facts: false
   become: true
   tasks:
-    - name: Reboot the remote server
-      reboot:
-
+    - name: Reboot lab server
+      ansible.builtin.reboot:
+        reboot_timeout: 300
